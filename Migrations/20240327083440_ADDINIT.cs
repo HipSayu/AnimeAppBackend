@@ -50,38 +50,14 @@ namespace ApiBasic.Migrations
                     UserName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     SĐT = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    TieuSu = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AvatarUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BackgroundUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TieuSu = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AvatarUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BackgroundUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserType = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Video",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    VideoId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NameVideos = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    UrlVideo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AvatarVideoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Time = table.Column<int>(type: "int", nullable: false),
-                    AnimeId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Video", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Video_Anime_AnimeId",
-                        column: x => x.AnimeId,
-                        principalTable: "Anime",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -153,6 +129,38 @@ namespace ApiBasic.Migrations
                         column: x => x.FollowingId,
                         principalTable: "User",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Video",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    VideoId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    NameVideos = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UrlVideo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AvatarVideoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Time = table.Column<int>(type: "int", nullable: false),
+                    ThoiDiemTao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AnimeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Video", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserUpVideo",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Video_Anime_AnimeId",
+                        column: x => x.AnimeId,
+                        principalTable: "Anime",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -172,23 +180,23 @@ namespace ApiBasic.Migrations
                 {
                     table.PrimaryKey("PK_Comments", x => x.CommentId);
                     table.ForeignKey(
-                        name: "FK_Comments_Comments_ParentCommentId",
+                        name: "FK_Comment_Comment",
                         column: x => x.ParentCommentId,
                         principalTable: "Comments",
                         principalColumn: "CommentId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Comments_User_UserId",
+                        name: "FK_Comment_User",
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Comments_Video_VideoId",
+                        name: "FK_Comment_Video",
                         column: x => x.VideoId,
                         principalTable: "Video",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,13 +216,13 @@ namespace ApiBasic.Migrations
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_UserDisLikeVideo_Video_VideoId",
                         column: x => x.VideoId,
                         principalTable: "Video",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -234,13 +242,13 @@ namespace ApiBasic.Migrations
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_UserDownloadVideo_Video_VideoId",
                         column: x => x.VideoId,
                         principalTable: "Video",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -260,13 +268,13 @@ namespace ApiBasic.Migrations
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_UserLikeVideo_Video_VideoId",
                         column: x => x.VideoId,
                         principalTable: "Video",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -286,13 +294,13 @@ namespace ApiBasic.Migrations
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_UserXemVideo_Video_VideoId",
                         column: x => x.VideoId,
                         principalTable: "Video",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -410,6 +418,11 @@ namespace ApiBasic.Migrations
                 name: "IX_Video_Id_NameVideos_Time",
                 table: "Video",
                 columns: new[] { "Id", "NameVideos", "Time" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Video_UserId",
+                table: "Video",
+                column: "UserId");
         }
 
         /// <inheritdoc />
@@ -443,10 +456,10 @@ namespace ApiBasic.Migrations
                 name: "TheLoai");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Video");
 
             migrationBuilder.DropTable(
-                name: "Video");
+                name: "User");
 
             migrationBuilder.DropTable(
                 name: "Anime");

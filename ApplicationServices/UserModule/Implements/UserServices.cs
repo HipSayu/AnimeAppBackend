@@ -53,8 +53,7 @@ namespace ApiBasic.ApplicationServices.UserModule.Implements
         {
             var users = _dbcontext
                 .Users.Include(u => u.Followers)
-                .ThenInclude(u => u.Following)
-                .Include(u => u.userUpVideos)
+                .ThenInclude(u => u.Following).ThenInclude(u => u.Videos)
                 .Where(u => u.UserName.ToLower().Contains(input.Keyword.ToLower()))
                 .Select(e => new FindUserDto
                 {
@@ -65,7 +64,7 @@ namespace ApiBasic.ApplicationServices.UserModule.Implements
                     TieuSu = e.TieuSu,
                     Follower = e.Following.Count(),
                     Following = e.Followers.Count(),
-                    Videos = e.userUpVideos.Count(),
+                    Videos = e.Videos.Count(),
                 });
             users = users.Skip(input.PageSize * (input.PageIndex - 1)).Take(input.PageSize);
             return new PageResultDto<List<FindUserDto>>

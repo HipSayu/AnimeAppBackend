@@ -11,8 +11,12 @@
         public DateTime ThoiDiemTao { get; set; }
         public string? AnimeName { get; set; }
 
-        public int Likes { get; set; } = 0;
+        /*  public int Likes { get; set; } = 0;
+          public int Viewer { get; set; } = 0;
+  
+          public int DisLike { get; set; } = 0;*/
 
-        public int DisLike { get; set; } = 0;
+        public string? nameUser { get; set; }
+        public string? AvatarUserUrl { get; set; }
     }
 }

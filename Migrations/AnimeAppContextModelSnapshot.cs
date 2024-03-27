@@ -164,11 +164,9 @@ namespace ApiBasic.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AvatarUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BackgroundUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
@@ -181,7 +179,6 @@ namespace ApiBasic.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TieuSu")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
@@ -294,29 +291,6 @@ namespace ApiBasic.Migrations
                     b.ToTable("UserLikeVideo", (string)null);
                 });
 
-            modelBuilder.Entity("ApiBasic.Domain.UserUpVideo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VideoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("VideoId");
-
-                    b.HasIndex("UserId", "VideoId");
-
-                    b.ToTable("UserUpVideo", (string)null);
-                });
-
             modelBuilder.Entity("ApiBasic.Domain.UserXemVideo", b =>
                 {
                     b.Property<int>("Id")
@@ -369,6 +343,9 @@ namespace ApiBasic.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("VideoId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -376,6 +353,8 @@ namespace ApiBasic.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AnimeId");
+
+                    b.HasIndex("UserId");
 
                     b.HasIndex("Id", "NameVideos", "Time");
 
@@ -387,19 +366,22 @@ namespace ApiBasic.Migrations
                     b.HasOne("ApiBasic.Domain.Comment", "ParentComment")
                         .WithMany("ChildComments")
                         .HasForeignKey("ParentCommentId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .HasConstraintName("FK_Comment_Comment");
 
                     b.HasOne("ApiBasic.Domain.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("FK_Comment_User");
 
                     b.HasOne("ApiBasic.Domain.Video", "Video")
                         .WithMany("Comments")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("FK_Comment_Video");
 
                     b.Navigation("ParentComment");
 
@@ -411,7 +393,7 @@ namespace ApiBasic.Migrations
             modelBuilder.Entity("ApiBasic.Domain.Search", b =>
                 {
                     b.HasOne("ApiBasic.Domain.User", "User")
-                        .WithMany("searchs")
+                        .WithMany("Searchs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
@@ -444,15 +426,15 @@ namespace ApiBasic.Migrations
             modelBuilder.Entity("ApiBasic.Domain.UserDisLikeVideo", b =>
                 {
                     b.HasOne("ApiBasic.Domain.User", "User")
-                        .WithMany("userDisLikeVideos")
+                        .WithMany("UserDisLikeVideos")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ApiBasic.Domain.Video", "Video")
-                        .WithMany("userDisLikeVideos")
+                        .WithMany("UserDisLikeVideos")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -463,15 +445,15 @@ namespace ApiBasic.Migrations
             modelBuilder.Entity("ApiBasic.Domain.UserDownloadVideo", b =>
                 {
                     b.HasOne("ApiBasic.Domain.User", "User")
-                        .WithMany("userDownloadVideo")
+                        .WithMany("UserDownloadVideo")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ApiBasic.Domain.Video", "Video")
-                        .WithMany("userDownloadVideo")
+                        .WithMany("UserDownloadVideo")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -490,7 +472,7 @@ namespace ApiBasic.Migrations
                     b.HasOne("ApiBasic.Domain.User", "Following")
                         .WithMany("Followers")
                         .HasForeignKey("FollowingId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Follower");
@@ -501,34 +483,15 @@ namespace ApiBasic.Migrations
             modelBuilder.Entity("ApiBasic.Domain.UserLikeVideo", b =>
                 {
                     b.HasOne("ApiBasic.Domain.User", "User")
-                        .WithMany("userLikeVideos")
+                        .WithMany("UserLikeVideos")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ApiBasic.Domain.Video", "Video")
-                        .WithMany("userLikeVideos")
+                        .WithMany("UserLikeVideos")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-
-                    b.Navigation("Video");
-                });
-
-            modelBuilder.Entity("ApiBasic.Domain.UserUpVideo", b =>
-                {
-                    b.HasOne("ApiBasic.Domain.User", "User")
-                        .WithMany("userUpVideos")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ApiBasic.Domain.Video", "Video")
-                        .WithMany("userUpVideos")
-                        .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -539,15 +502,15 @@ namespace ApiBasic.Migrations
             modelBuilder.Entity("ApiBasic.Domain.UserXemVideo", b =>
                 {
                     b.HasOne("ApiBasic.Domain.User", "User")
-                        .WithMany("userXemVideos")
+                        .WithMany("UserXemVideos")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ApiBasic.Domain.Video", "Video")
-                        .WithMany("userXemVideos")
+                        .WithMany("UserXemVideos")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -563,7 +526,16 @@ namespace ApiBasic.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ApiBasic.Domain.User", "User")
+                        .WithMany("Videos")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_UserUpVideo");
+
                     b.Navigation("Anime");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ApiBasic.Domain.Anime", b =>
@@ -591,32 +563,30 @@ namespace ApiBasic.Migrations
 
                     b.Navigation("Following");
 
-                    b.Navigation("searchs");
+                    b.Navigation("Searchs");
 
-                    b.Navigation("userDisLikeVideos");
+                    b.Navigation("UserDisLikeVideos");
 
-                    b.Navigation("userDownloadVideo");
+                    b.Navigation("UserDownloadVideo");
 
-                    b.Navigation("userLikeVideos");
+                    b.Navigation("UserLikeVideos");
 
-                    b.Navigation("userUpVideos");
+                    b.Navigation("UserXemVideos");
 
-                    b.Navigation("userXemVideos");
+                    b.Navigation("Videos");
                 });
 
             modelBuilder.Entity("ApiBasic.Domain.Video", b =>
                 {
                     b.Navigation("Comments");
 
-                    b.Navigation("userDisLikeVideos");
+                    b.Navigation("UserDisLikeVideos");
 
-                    b.Navigation("userDownloadVideo");
+                    b.Navigation("UserDownloadVideo");
 
-                    b.Navigation("userLikeVideos");
+                    b.Navigation("UserLikeVideos");
 
-                    b.Navigation("userUpVideos");
-
-                    b.Navigation("userXemVideos");
+                    b.Navigation("UserXemVideos");
                 });
 #pragma warning restore 612, 618
         }

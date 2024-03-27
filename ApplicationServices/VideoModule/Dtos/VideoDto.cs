@@ -16,7 +16,7 @@ namespace ApiBasic.ApplicationServices.VideoModule.Dtos
         public ICollection<UserLikeVideo> userLikeVideos { get; set; }
         public ICollection<UserDisLikeVideo> userDisLikeVideos { get; set; }
         public ICollection<UserXemVideo> userXemVideos { get; set; }
-        public ICollection<UserUpVideo> userUpVideos { get; set; }
+       
         public ICollection<UserDownloadVideo> userDownloadVideo { get; set; }
     }
 }

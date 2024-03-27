@@ -11,6 +11,6 @@ namespace ApiBasic.ApplicationServices.VideoModule.Abstract
 
         void Delete(int UserId);
 
-        PageResultDto<List<FindUserDto>> GetAll(FilterDto input);
+        PageResultDto<List<FindVideoDto>> GetAll(FilterDto input);
     }
 }
