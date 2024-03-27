@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ApiWebCoin.Dtos.Exceptions;
-using ApiWebCoin.Exceptions;
+using ApiBasic.Shared.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiWebBasicPlatFrom.Controllers
@@ -34,5 +29,5 @@ namespace ApiWebBasicPlatFrom.Controllers
             );
         }
     }
-    
+
 }

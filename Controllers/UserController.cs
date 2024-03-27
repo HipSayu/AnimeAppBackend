@@ -1,41 +1,74 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ApiWebBasicPlatFrom.Dtos.User;
-using ApiWebBasicPlatFrom.services.interfaces;
+﻿using ApiBasic.ApplicationServices.UserModule.Abstract;
+using ApiBasic.ApplicationServices.UserModule.Dtos;
+using ApiBasic.Shared.Shared;
+using ApiWebBasicPlatFrom.Controllers;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiWebBasicPlatFrom.Controllers
+namespace ApiBasic.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
     public class UserController : ApiControllerBase
     {
-        private IUserServices _userServices ;
-        public UserController (IUserServices userServices, ILogger<UserController> logger) : base(logger)
+        private readonly IUserServices _iUserServices;
+
+        public UserController(IUserServices iUserServices, ILogger<UserController> logger)
+            : base(logger)
         {
-            _userServices = userServices;
+            _iUserServices = iUserServices;
         }
-        [HttpPost("Login")]
-        public ActionResult Login (LoginDto input) {
-            try {
-                return Ok(_userServices.Login(input));
+
+        [HttpGet("get-all")]
+        public ActionResult GetAll(FilterDto input)
+        {
+            try
+            {
+                return Ok(_iUserServices.GetAll(input));
             }
-            catch (Exception ex) {
-                return HandleException(ex) ;
-            }
-        }
-        [HttpPost("CreateUser")]
-        public ActionResult CreateUser (CreateUserDto input) {
-            try {
-                _userServices.Create(input);
-                return Ok() ;
-            }
-            catch (Exception ex) {
-                return HandleException(ex) ;
+            catch (Exception ex)
+            {
+                return HandleException(ex);
             }
         }
 
+        [HttpPost("create")]
+        public ActionResult Create(CreateUserDto input)
+        {
+            try
+            {
+                _iUserServices.Create(input);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return HandleException(ex);
+            }
+        }
+
+        [HttpDelete("delete")]
+        public ActionResult Delete(int userId)
+        {
+            try
+            {
+                _iUserServices.Delete(userId);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return HandleException(ex);
+            }
+        }
+        [HttpPut("update")]
+        public ActionResult Update(UpdateUserDto input)
+        {
+            try
+            {
+                _iUserServices.Update(input);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return HandleException(ex);
+            }
+        }
     }
 }

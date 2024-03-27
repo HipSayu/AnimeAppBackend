@@ -3,20 +3,56 @@
   "WorkspaceRootPath": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userdislikevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userdislikevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userdownloadvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userdownloadvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userdislikevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userdislikevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userxemvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userxemvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userupvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userupvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userlikevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userlikevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\domain\\userxemvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:domain\\userxemvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\usermodule\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\usermodule\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\videomodule\\dtos\\findvideodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\videomodule\\dtos\\findvideodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\videomodule\\dtos\\videodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\videomodule\\dtos\\videodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\videomodule\\dtos\\createvideodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\videomodule\\dtos\\createvideodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\videomodule\\abstract\\ivideoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\videomodule\\abstract\\ivideoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\usermodule\\abstract\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\usermodule\\abstract\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\applicationservices\\videomodule\\dtos\\updatevideodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:applicationservices\\videomodule\\dtos\\updatevideodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,28 +98,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserDownloadVideo.cs",
-              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDownloadVideo.cs",
-              "RelativeDocumentMoniker": "Domain\\UserDownloadVideo.cs",
-              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDownloadVideo.cs",
-              "RelativeToolTip": "Domain\\UserDownloadVideo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "UserFollow.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserFollow.cs",
+              "RelativeDocumentMoniker": "Domain\\UserFollow.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserFollow.cs",
+              "RelativeToolTip": "Domain\\UserFollow.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T03:14:56.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserDisLikeVideo.cs",
-              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDisLikeVideo.cs",
-              "RelativeDocumentMoniker": "Domain\\UserDisLikeVideo.cs",
-              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDisLikeVideo.cs",
-              "RelativeToolTip": "Domain\\UserDisLikeVideo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T03:14:01.754Z",
+              "WhenOpened": "2024-03-27T01:45:09.47Z",
               "EditorCaption": ""
             },
             {
@@ -94,22 +117,152 @@
               "RelativeDocumentMoniker": "Domain\\UserXemVideo.cs",
               "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserXemVideo.cs",
               "RelativeToolTip": "Domain\\UserXemVideo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T03:12:16.185Z",
+              "WhenOpened": "2024-03-27T01:45:08.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "UserUpVideo.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserUpVideo.cs",
+              "RelativeDocumentMoniker": "Domain\\UserUpVideo.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserUpVideo.cs",
+              "RelativeToolTip": "Domain\\UserUpVideo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:45:07.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UserLikeVideo.cs",
               "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserLikeVideo.cs",
               "RelativeDocumentMoniker": "Domain\\UserLikeVideo.cs",
               "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserLikeVideo.cs",
               "RelativeToolTip": "Domain\\UserLikeVideo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T03:10:41.746Z",
+              "WhenOpened": "2024-03-27T01:45:06.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDownloadVideo.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDownloadVideo.cs",
+              "RelativeDocumentMoniker": "Domain\\UserDownloadVideo.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDownloadVideo.cs",
+              "RelativeToolTip": "Domain\\UserDownloadVideo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:45:00.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\UserModule\\Dtos\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\UserModule\\Dtos\\CreateUserDto.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\UserModule\\Dtos\\CreateUserDto.cs",
+              "RelativeToolTip": "ApplicationServices\\UserModule\\Dtos\\CreateUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:42:43.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserDisLikeVideo.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDisLikeVideo.cs",
+              "RelativeDocumentMoniker": "Domain\\UserDisLikeVideo.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Domain\\UserDisLikeVideo.cs",
+              "RelativeToolTip": "Domain\\UserDisLikeVideo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:41:21.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VideoDto.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\VideoDto.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\VideoModule\\Dtos\\VideoDto.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\VideoDto.cs",
+              "RelativeToolTip": "ApplicationServices\\VideoModule\\Dtos\\VideoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:38:49.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FindVideoDto.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\FindVideoDto.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\VideoModule\\Dtos\\FindVideoDto.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\FindVideoDto.cs",
+              "RelativeToolTip": "ApplicationServices\\VideoModule\\Dtos\\FindVideoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:38:41.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\UserModule\\Abstract\\IUserServices.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\UserModule\\Abstract\\IUserServices.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\UserModule\\Abstract\\IUserServices.cs",
+              "RelativeToolTip": "ApplicationServices\\UserModule\\Abstract\\IUserServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:38:00.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IVideoServices.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Abstract\\IVideoServices.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\VideoModule\\Abstract\\IVideoServices.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Abstract\\IVideoServices.cs",
+              "RelativeToolTip": "ApplicationServices\\VideoModule\\Abstract\\IVideoServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:37:12.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateVideoDto.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\UpdateVideoDto.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\VideoModule\\Dtos\\UpdateVideoDto.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\UpdateVideoDto.cs",
+              "RelativeToolTip": "ApplicationServices\\VideoModule\\Dtos\\UpdateVideoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:36:09.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateVideoDto.cs",
+              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\CreateVideoDto.cs",
+              "RelativeDocumentMoniker": "ApplicationServices\\VideoModule\\Dtos\\CreateVideoDto.cs",
+              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\ApplicationServices\\VideoModule\\Dtos\\CreateVideoDto.cs",
+              "RelativeToolTip": "ApplicationServices\\VideoModule\\Dtos\\CreateVideoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T01:32:20.889Z",
               "EditorCaption": ""
             }
           ]

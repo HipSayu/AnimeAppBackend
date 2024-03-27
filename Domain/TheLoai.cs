@@ -12,5 +12,6 @@ namespace ApiBasic.Domain
 
         [Required]
         public string TenTheLoai { get; set; } = null!;
+        public ICollection<TheLoaiAnime> theLoaiAnimes { get; set; }
     }
 }

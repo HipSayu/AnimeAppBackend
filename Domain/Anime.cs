@@ -16,5 +16,8 @@ namespace ApiBasic.Domain
 
         public int Age { get; set; } = 0;
         public string Detail { get; set; }
+
+        public ICollection<TheLoaiAnime> theLoaiAnimes { get; set; }
+        public ICollection<Video> videos { get; set; }
     }
 }

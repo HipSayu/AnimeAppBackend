@@ -19,16 +19,27 @@ namespace ApiBasic.Domain
         [MinLength(8)]
         public string Password { get; set; } = null!;
 
-        [RegularExpression("/(84|0[3|5|7|8|9])+([0-9]{8})\b/g")]
+        [RegularExpression(@"^(?:\+?84|0)(\d{9,10})$")]
         public string SĐT { get; set; }
         public string TieuSu { get; set; }
         public string AvatarUrl { get; set; }
         public string BackgroundUrl { get; set; }
+
+        public int UserType { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
 
         // Danh sách các user mà user này đang theo dõi
         public ICollection<UserFollow> Following { get; set; }
 
         // Danh sách các user đang theo dõi user này
         public ICollection<UserFollow> Followers { get; set; }
+
+        public ICollection<UserLikeVideo> userLikeVideos { get; set; }
+        public ICollection<UserUpVideo> userUpVideos { get; set; }
+        public ICollection<UserDisLikeVideo> userDisLikeVideos { get; set; }
+        public ICollection<UserXemVideo> userXemVideos { get; set; }
+        public ICollection<UserDownloadVideo> userDownloadVideo { get; set; }
+        public ICollection<Search> searchs { get; set; }
     }
 }

@@ -1,24 +1,24 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
-using ApiBasic.Services.Implements;
-using ApiBasic.Services.Interfaces;
-using ApiWebBasicPlatFrom.Context;
-using ApiWebBasicPlatFrom.services.implements;
-using ApiWebBasicPlatFrom.services.interfaces;
+using ApiBasic.ApplicationServices.ModuleFile.Abstract;
+using ApiBasic.ApplicationServices.ModuleFile.Implements;
+using ApiBasic.ApplicationServices.UserModule.Abstract;
+using ApiBasic.ApplicationServices.UserModule.Implements;
+using ApiBasic.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<AnimeAppContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyDB"));
 });
-            //Hipdz
-            //1AB8A26D5B94FBEF8016115E9E8B152B ~16112003
+//Hipdz
+//1AB8A26D5B94FBEF8016115E9E8B152B ~16112003
 
 // Cấu hình JWT
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -90,12 +90,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Add Scoped ở đây
-builder.Services.AddScoped<IStudentServices, StudentServices>();
 builder.Services.AddScoped<IUserServices, UserServices>();
-builder.Services.AddScoped<IProductServices, ProductService>();
-builder.Services.AddScoped<ICategoryServices, CategoryService>();
-builder.Services.AddScoped<IClassroomServices, ClassroomServices>();
-
+builder.Services.AddScoped<IManageImageServices, ManageImageServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
