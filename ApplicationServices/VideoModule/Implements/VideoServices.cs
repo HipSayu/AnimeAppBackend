@@ -22,12 +22,14 @@ namespace ApiBasic.ApplicationServices.VideoModule.Implements
             _dbcontext.Videos.Add(
                 new Video
                 {
+                    UserId = input.UserId,
                     NameVideos = input.NameVideos,
                     ThoiDiemTao = input.ThoiDiemTao,
                     Time = input.Time,
                     AvatarVideoUrl = input.AvatarVideoUrl,
                     UrlVideo = input.UrlVideo,
                     VideoId = input.VideoId,
+                    AnimeId = input.AnimeId,
                 }
             );
             _dbcontext.SaveChanges();
@@ -44,7 +46,27 @@ namespace ApiBasic.ApplicationServices.VideoModule.Implements
 
         public PageResultDto<List<FindVideoDto>> GetAll(FilterDto input)
         {
-            throw new NotImplementedException();
+            var videos = _dbcontext
+                .Videos.Include(v => v.User)
+                .Where(v => v.NameVideos.ToLower().Contains(input.Keyword.ToLower()))
+                .Select(v => new FindVideoDto
+                {
+                    NameVideos = v.NameVideos,
+                    ThoiDiemTao = v.ThoiDiemTao,
+                    Time = v.Time,
+                    AvatarVideoUrl = v.AvatarVideoUrl,
+                    UrlVideo = v.UrlVideo,
+                    Id = v.Id,
+                    VideoId = v.VideoId,
+                    nameUser = v.User.UserName,
+                    AvatarUserUrl = v.User.AvatarUrl,
+                });
+            videos = videos.Skip(input.PageSize * (input.PageIndex - 1)).Take(input.PageSize);
+            return new PageResultDto<List<FindVideoDto>>
+            {
+                Items = videos.ToList(),
+                TotalItem = videos.Count(),
+            };
         }
 
         public void Update(UpdateVideoDto input)

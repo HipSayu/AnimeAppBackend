@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Migrations\\20240327083440_ADDINIT.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240327083440_ADDINIT.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|d:\\workspace\\backenddotnet\\api backend\\apiwebbasicplatfrom\\infrastructure\\animeappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{646728AE-FB5F-4D20-818B-A6BC70AEBE5E}|ApiBasic.csproj|solutionrelative:infrastructure\\animeappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,38 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240327083440_ADDINIT.cs",
-              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Migrations\\20240327083440_ADDINIT.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240327083440_ADDINIT.cs",
-              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Migrations\\20240327083440_ADDINIT.cs",
-              "RelativeToolTip": "Migrations\\20240327083440_ADDINIT.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T08:34:40.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AnimeAppContext.cs",
-              "DocumentMoniker": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Infrastructure\\AnimeAppContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\AnimeAppContext.cs",
-              "ToolTip": "D:\\workspace\\BackEndDotNet\\API Backend\\ApiWebBasicPlatFrom\\Infrastructure\\AnimeAppContext.cs",
-              "RelativeToolTip": "Infrastructure\\AnimeAppContext.cs",
-              "ViewState": "AQIAALUAAAAAAAAAAAAAAEMAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T08:32:02.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"

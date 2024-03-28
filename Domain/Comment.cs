@@ -12,13 +12,13 @@
 
         // Khóa ngoại liên kết đến Comment cha (nếu có)
         public int? ParentCommentId { get; set; }
-        public Comment ParentComment { get; set; }
+        public Comment? ParentComment { get; set; }
 
         // Khóa ngoại liên kết đến User
         public int UserId { get; set; }
         public User User { get; set; }
 
         // Danh sách các comment con (nếu có)
-        public ICollection<Comment> ChildComments { get; set; }
+        public ICollection<Comment>? ChildComments { get; set; }
     }
 }

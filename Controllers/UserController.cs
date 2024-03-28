@@ -44,7 +44,7 @@ namespace ApiBasic.Controllers
             }
         }
 
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{userId}")]
         public ActionResult Delete(int userId)
         {
             try

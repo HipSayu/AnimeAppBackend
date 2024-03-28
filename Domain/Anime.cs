@@ -9,7 +9,7 @@ namespace ApiBasic.Domain
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int IdAnime { get; set; }
+        public string AnimeId { get; set; }
 
         public string NameAnime { get; set; } = null!;
         public string Quality { get; set; }

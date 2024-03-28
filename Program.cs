@@ -2,6 +2,8 @@ using ApiBasic.ApplicationServices.ModuleFile.Abstract;
 using ApiBasic.ApplicationServices.ModuleFile.Implements;
 using ApiBasic.ApplicationServices.UserModule.Abstract;
 using ApiBasic.ApplicationServices.UserModule.Implements;
+using ApiBasic.ApplicationServices.VideoModule.Abstract;
+using ApiBasic.ApplicationServices.VideoModule.Implements;
 using ApiBasic.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -92,6 +94,7 @@ builder.Services.AddSwaggerGen();
 //Add Scoped ở đây
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IManageImageServices, ManageImageServices>();
+builder.Services.AddScoped<IVideoServices, VideoServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

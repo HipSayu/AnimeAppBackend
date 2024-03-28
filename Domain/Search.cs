@@ -11,7 +11,7 @@ namespace ApiBasic.Domain
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string? SearchKeyWord {  get; set; }
+        public string SearchKeyWord { get; set; } = null!;
 
         public int UserId { get; set; }
 

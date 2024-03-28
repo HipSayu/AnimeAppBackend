@@ -53,21 +53,24 @@ namespace ApiBasic.Infrastructure
                 .Entity<Comment>()
                 .HasOne(c => c.Video)
                 .WithMany(v => v.Comments)
-                .HasForeignKey(c => c.VideoId).HasConstraintName("FK_Comment_Video")
+                .HasForeignKey(c => c.VideoId)
+                .HasConstraintName("FK_Comment_Video")
                 .OnDelete(DeleteBehavior.Restrict); // Xóa các comment liên quan khi video bị xóa
 
             modelBuilder
                 .Entity<Comment>()
                 .HasOne(c => c.ParentComment)
                 .WithMany(pc => pc.ChildComments)
-                .HasForeignKey(c => c.ParentCommentId).HasConstraintName("FK_Comment_Comment")
+                .HasForeignKey(c => c.ParentCommentId)
+                .HasConstraintName("FK_Comment_Comment")
                 .OnDelete(DeleteBehavior.Restrict); // Không cho phép xóa comment cha khi có comment con tồn tại
 
             modelBuilder
                 .Entity<Comment>()
                 .HasOne(c => c.User)
                 .WithMany(u => u.Comments)
-                .HasForeignKey(c => c.UserId).HasConstraintName("FK_Comment_User")
+                .HasForeignKey(c => c.UserId)
+                .HasConstraintName("FK_Comment_User")
                 .OnDelete(DeleteBehavior.Restrict); // Xóa các comment liên quan khi user bị xóa
 
             //Search
@@ -220,13 +223,18 @@ namespace ApiBasic.Infrastructure
                 {
                     v.Id,
                     v.NameVideos,
-                    v.Time 
+                    v.Time
                 });
                 entity
                     .HasOne(v => v.User)
                     .WithMany(v => v.Videos)
                     .HasForeignKey(v => v.UserId)
                     .HasConstraintName("FK_UserUpVideo");
+                entity
+                    .HasOne(v => v.Anime)
+                    .WithMany(v => v.videos)
+                    .HasForeignKey(v => v.AnimeId)
+                    .HasConstraintName("FK_Anime_Vides");
             });
         }
     }
